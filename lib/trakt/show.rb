@@ -13,6 +13,12 @@ module Trakt
       require_settings %w|username password apikey|
       post('show/seen/', data)
     end
+    def summaries(*args)
+      get_with_args('/show/summaries.json/', *args)
+    end
+    def summary(*args)
+      get_with_args('/show/summary.json/', *args)
+    end
     # need to use thetvdb id here since the slug can't be used for unseen
     def unseen(title)
       all = seasons title
