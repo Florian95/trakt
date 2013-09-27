@@ -37,5 +37,8 @@ module Trakt
     def seasons(title)
       get('show/seasons.json/', title)
     end
+    def season(*args)
+      get_with_args('/show/season.json/', *args)
+    end
   end
 end
