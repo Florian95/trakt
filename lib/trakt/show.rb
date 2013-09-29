@@ -9,6 +9,10 @@ module Trakt
       require_settings %w|username password apikey|
       post('show/episode/seen/', data)
     end
+    def add_to_library(data)
+      require_settings %w|username password apikey|
+      post('show/library/', data)
+    end
     def seen(data)
       require_settings %w|username password apikey|
       post('show/seen/', data)
