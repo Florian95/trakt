@@ -13,6 +13,10 @@ module Trakt
       require_settings %w|username password apikey|
       post('show/library/', data)
     end
+    def remove_from_library(data)
+      require_settings %w|username password apikey|
+      post('show/unlibrary/', data)
+    end
     def seen(data)
       require_settings %w|username password apikey|
       post('show/seen/', data)
